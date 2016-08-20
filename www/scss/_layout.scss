@@ -1,0 +1,24 @@
+/* General Page Elements */
+.row-wrapper {
+    @include row();
+    
+    // Alternating Row Color
+    &:nth-child(odd) {
+        background: $shade-color;
+    }
+    
+    // Header
+    &:nth-child(1) {
+        background: $primary-color;
+    }
+    
+    .outer-container {
+        @include outer-container;
+    }
+}
+
+/** Article: Teaser Top */
+article.teaser--top {
+    @include span-columns(8);
+    @include shift(2);
+}
